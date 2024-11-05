@@ -344,9 +344,9 @@ We rewrite the above SIMP program into the following PA equivalent.
 1: id <- input()
 2: query <- "select " + id
 3: b <- id == ""
-4: ifn b goto 
+4: ifn b goto 8
 5: id <- input()
-6: query <- sanitize("select", id) 
+6: query <- sanitize("select ", id) 
 7: goto 3
 8: _ <- exec(query)
 9: r_ret <- id 
